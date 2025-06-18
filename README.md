@@ -134,6 +134,9 @@ npm run start:dev
 
 # Build production
 npm run build
+
+# Start with PM2 (no Docker)
+pm2 start pm2.config.js
 ```
 
 ## Author
