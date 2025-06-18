@@ -8,7 +8,7 @@ const ProtectedLayout = () => {
 
   useEffect(() => {
     if (!user) {
-      navigate('/login'); 
+      navigate('/'); 
     }
   }, [user, navigate]);
 
