@@ -4,17 +4,17 @@ const prisma = new PrismaClient();
 
 async function main() {
   // Create users
-  const alice = await prisma.user.create({
+  const tewodros = await prisma.user.create({
     data: {
-      username: 'Alice',
-      email: 'alice@example.com',
+      username: 'Tewodros',
+      email: 'tewodros@example.com',
     },
   });
 
-  const bob = await prisma.user.create({
+  const josi = await prisma.user.create({
     data: {
-      username: 'Bob',
-      email: 'bob@example.com',
+      username: 'Josi',
+      email: 'josi@example.com',
     },
   });
 
@@ -29,23 +29,23 @@ async function main() {
   // Add participants to room
   await prisma.roomParticipant.createMany({
     data: [
-      { userId: alice.id, roomId: room.id },
-      { userId: bob.id, roomId: room.id },
+      { userId: tewodros.id, roomId: room.id },
+      { userId: josi.id, roomId: room.id },
     ],
   });
 
-  // Optional: Add sample message
+  // Add sample message
   await prisma.message.create({
     data: {
-      senderId: alice.id,
+      senderId: tewodros.id,
       roomId: room.id,
-      content: 'Hello Bob!',
+      content: 'Hello Josi!',
     },
   });
 
-  console.log('\n Seeded:');
-  console.log('Alice ID:', alice.id);
-  console.log('Bob ID:  ', bob.id);
+  console.log('\nSeeded:');
+  console.log('Tewodros ID:', tewodros.id);
+  console.log('Josi ID:  ', josi.id);
   console.log('Room ID: ', room.id);
 }
 
