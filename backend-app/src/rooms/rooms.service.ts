@@ -6,7 +6,7 @@ export class RoomsService {
   constructor(private prisma: PrismaService) {}
 
   async getOrCreatePrivateRoom(userAId: string, userBId: string) {
-    // Step 1: Try to find an existing private room with exactly these 2 participants
+    // find an existing private room with exactly these 2 participants
     const existingRoom = await this.prisma.room.findFirst({
       where: {
         isGroup: false,
