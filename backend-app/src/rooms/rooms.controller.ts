@@ -1,4 +1,3 @@
-// src/rooms/rooms.controller.ts
 import { Controller, Post, Body } from '@nestjs/common';
 import { RoomsService } from './rooms.service';
 
