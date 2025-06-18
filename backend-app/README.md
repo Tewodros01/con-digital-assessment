@@ -14,7 +14,7 @@ This is a full-stack real-time chat application built with:
 
 ## 📸 Preview
 
-![Chat Screenshot](./screenshots/chat-ui.png) 
+![Chat Screenshot](./screenshots/chat-ui.png)
 ![Terminal Logs](./screenshots/terminal-logs.png)
 
 ---
@@ -32,13 +32,10 @@ This is a full-stack real-time chat application built with:
 
 ## 🧰 Tech Stack
 
-| Layer       | Technology                            |
-|-------------|----------------------------------------|
-| Frontend    | React, Zustand, React Hook Form        |
-| Backend     | NestJS, Socket.IO, Prisma ORM          |
-| Database    | PostgreSQL                             |
-| Realtime    | Redis + Socket.IO Redis Adapter        |
-| Deployment  | Docker, Docker Compose, PM2 Cluster    |
-
-
-
+| Layer      | Technology                          |
+| ---------- | ----------------------------------- |
+| Frontend   | React, Zustand, React Hook Form     |
+| Backend    | NestJS, Socket.IO, Prisma ORM       |
+| Database   | PostgreSQL                          |
+| Realtime   | Redis + Socket.IO Redis Adapter     |
+| Deployment | Docker, Docker Compose, PM2 Cluster |

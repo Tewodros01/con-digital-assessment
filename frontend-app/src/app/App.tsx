@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import PublicLayout from "./layoutes/PublicLayout";
 import { lazy, Suspense } from "react";
+import ProtectedLayout from "./layoutes/ProtectedLayout";
 
 // Lazy loaded components
 const RegisterPage = lazy(() => import("./features/auth/RegisterPage"));
@@ -12,7 +13,9 @@ function App() {
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<RegisterPage />} />
-          <Route path="/chat" element={<ChatPage />} />
+        </Route>
+        <Route path="/" element={<ProtectedLayout />}>
+          <Route path="chat" element={<ChatPage />} />
         </Route>
       </Routes>
     </Suspense>
