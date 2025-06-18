@@ -39,7 +39,7 @@ This project is a full-stack real-time chat application built using **NestJS**, 
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/chat-app.git
+git clone https://github.com/Tewodros01/con-digital-assessment.git
 cd chat-app
 ```
 
