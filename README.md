@@ -138,14 +138,6 @@ npm run build
 pm run start:pm2
 ```
 
----
-
-## License
-
-MIT © 2025
-
----
-
 ## Author
 
 **Tewodros Misawoy** — built as part of a technical assessment for **ConDigital**.
