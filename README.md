@@ -134,9 +134,6 @@ npm run start:dev
 
 # Build production
 npm run build
-
-# Start in PM2 (without docker)
-pm run start:pm2
 ```
 
 ## Author
