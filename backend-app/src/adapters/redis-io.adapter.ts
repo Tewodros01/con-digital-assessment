@@ -13,15 +13,17 @@ export class RedisIoAdapter extends IoAdapter {
   }
 
   async connectToRedis(): Promise<void> {
-    const pubClient = createClient({ url: 'redis://127.0.0.1:6379' });
+    const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
+  
+    const pubClient = createClient({ url: redisUrl });
     const subClient = pubClient.duplicate();
-
+  
     await pubClient.connect();
     await subClient.connect();
-
+  
     this.adapterConstructor = createAdapter(pubClient, subClient);
-    console.log('[RedisIoAdapter] Redis adapter connected');
-  }
+    console.log('[RedisIoAdapter] Redis adapter connected to:', redisUrl);
+  }  
 
   // return a raw Socket.IO server instance
   createIOServer(

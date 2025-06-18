@@ -40,7 +40,7 @@ This project is a full-stack real-time chat application built using **NestJS**, 
 
 ```bash
 git clone https://github.com/Tewodros01/con-digital-assessment.git
-cd chat-app
+cd con-digital-assessment
 ```
 
 ---
@@ -109,12 +109,11 @@ module.exports = {
 
 ### 7. Testing Real-Time Chat
 
-Visit `http://localhost:3000` (assuming your React frontend runs here)
-
-* Register/Login a user
-* Select a user to start a private chat
-* Open two browser tabs to simulate two users
-* Messages will be delivered instantly between users
+* Start both frontend and backend containers.
+* Visit http://localhost:3000
+* Register two users.
+* Open two tabs, log in as different users.
+* Start a conversation — messages will be delivered in real-time across tabs.
 
 ---
 

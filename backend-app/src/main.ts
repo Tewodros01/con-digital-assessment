@@ -7,17 +7,17 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const logger = new Logger('Bootstrap');
 
-  app.enableCors();
+  app.enableCors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+  });
 
   const adapter = new RedisIoAdapter(app);
   await adapter.connectToRedis();
   app.useWebSocketAdapter(adapter);
 
-  // Only first instance in PM2 cluster binds to HTTP
-  if (!process.env.NODE_APP_INSTANCE) {
-    const port = process.env.PORT || 4500;
-    await app.listen(port);
-    logger.log(`🚀 App running on http://localhost:${port}`);
-  }
+  const port = process.env.PORT || 4500;
+  await app.listen(port);
+  logger.log(`App running on http://localhost:${port}`);
 }
 bootstrap();
