@@ -32,7 +32,7 @@ This project is a full-stack real-time chat application built using **NestJS**, 
 
 * [Docker](https://docs.docker.com/get-docker/) installed
 * [Node.js](https://nodejs.org/) (for local dev only)
-* \[Yarn/NPM] if testing locally
+* \Yarn/NPM if testing locally
 
 ---
 
