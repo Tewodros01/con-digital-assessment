@@ -68,8 +68,9 @@ docker-compose up --build
 This will:
 
 * Build the backend image
-* Start PostgreSQL, Redis
-* Launch backend on port **4500** in **PM2 cluster mode**
+* Launch PostgreSQL, Redis
+* Start backend with PM2 cluster mode on port 4500
+* Start the frontend on port 3000**
 
 ---
 
