@@ -25,7 +25,7 @@ export class RoomsService {
       return existingRoom;
     }
 
-    // Step 2: Create new room if it doesn't exist
+    // Create new room if it doesn't exist
     const newRoom = await this.prisma.room.create({
       data: {
         isGroup: false,
