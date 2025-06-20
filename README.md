@@ -108,7 +108,7 @@ module.exports = {
 
 ---
 
-### 7. 🧪 Testing Real-Time Chat Between Two Users (in Two Browsers)
+### 7. Testing Real-Time Chat Between Two Users (in Two Browsers)
 
 1. Start all services:
 
