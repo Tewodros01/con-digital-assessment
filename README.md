@@ -108,27 +108,38 @@ module.exports = {
 
 ---
 
-### 7. Testing Real-Time Chat
+### 7. 🧪 Testing Real-Time Chat Between Two Users (in Two Browsers)
 
-1. Start all services using Docker:
+1. Start all services:
 
    ```bash
    docker-compose up --build
    ```
 
-2. Open your browser and visit:
+2. Open your browser and go to:
 
    ```
    http://localhost:3000
    ```
 
-3. Register two different users using either:
-   - Two separate tabs
-   - Or one tab + an incognito window
+3. In your **main browser window**, register a user (e.g., `user1`).
 
-4. After each registration, refresh the home page to view the newly registered users.
+4. Open a **second browser** (e.g., Firefox if you used Chrome, or use an Incognito window) and go to:
 
-5. Use each tab to select a different user and initiate a conversation.
+   ```
+   http://localhost:3000
+   ```
+
+5. Register a second user (e.g., `user2`) using a different email or username.
+
+6. After both users are registered:
+   - Go back to each browser window
+   - Use the interface to select or identify the user to chat with
+   - Send a message from one user
+
+7. You should see the message **instantly appear** in the second browser window — confirming that:
+   - Real-time communication is working via **Socket.IO**
+   - Message events are correctly synchronized across PM2 instances using **Redis Pub/Sub**
 
 ---
 
