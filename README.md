@@ -110,11 +110,25 @@ module.exports = {
 
 ### 7. Testing Real-Time Chat
 
-* Start both frontend and backend containers.
-* Visit http://localhost:3000
-* Register two users.
-* Open two tabs, log in as different users.
-* Start a conversation — messages will be delivered in real-time across tabs.
+1. Start all services using Docker:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+2. Open your browser and visit:
+
+   ```
+   http://localhost:3000
+   ```
+
+3. Register two different users using either:
+   - Two separate tabs
+   - Or one tab + an incognito window
+
+4. After each registration, refresh the home page to view the newly registered users.
+
+5. Use each tab to select a different user and initiate a conversation.
 
 ---
 
